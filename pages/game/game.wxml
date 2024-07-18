@@ -42,7 +42,7 @@
             bindtouchstart="touchStart"
             bindtouchmove="touchMove"
             bindtouchend="touchEnd"
-            style="position: relative; left: 18rpx; top: -89rpx; width: 699rpx; height: 520rpx; display: block; box-sizing: border-box"></canvas>
+            style="position: relative; left: 18rpx; top: -89rpx; width: {{CanvasWidth}}rpx; height: {{CanvasHeight}}rpx; display: block; box-sizing: border-box"></canvas>
 
 
 </view>

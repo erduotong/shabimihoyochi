@@ -8,6 +8,8 @@ Page({
      * 页面的初始数据
      */
     data: {
+        CanvasWidth: 699,
+        CanvasHeight: 520,
         colors: {
             red: 0,
             green: 0,
@@ -234,8 +236,7 @@ Page({
             moveY: e.touches[0].y,
         })
 
-    }
-    ,
+    },
     touchMove: function (e) {
         const x = e.touches[0].x;
         const y = e.touches[0].y;
@@ -256,8 +257,7 @@ Page({
             moveY: y,
         })
 
-    }
-    ,
+    },
 
 
     touchEnd: function (e) {
@@ -270,8 +270,7 @@ Page({
         if (this.data.playingMode === "2") {
             this.paintGoldenLine();
         }
-    }
-    ,
+    },
 
 
 /////
@@ -283,8 +282,7 @@ Page({
         });
 
 
-    }
-    ,
+    },
     changeColor: function () {
 
         const {
@@ -311,8 +309,7 @@ Page({
             colorShowerStyle: `background-color: ${color};`,
         });
 
-    }
-    ,
+    },
     changeRed: function (e) {
         const value = e.detail.value;
         this.setData({
@@ -320,30 +317,26 @@ Page({
         })
         this.changeColor()
 
-    }
-    ,
+    },
     changeGreen: function (e) {
         const value = e.detail.value;
         this.setData({
             "colors.green": value,
         })
         this.changeColor()
-    }
-    ,
+    },
     changeBlue: function (e) {
         const value = e.detail.value;
         this.setData({
             "colors.blue": value,
         })
         this.changeColor()
-    }
-    ,
+    },
     changeSize: function (e) {
         const value = e.detail.value;
         this.setData({
             "size": value,
         })
-    }
-    ,
+    },
 
 })
