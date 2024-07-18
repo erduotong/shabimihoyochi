@@ -1,0 +1,9 @@
+<view class="container">
+ <canvas
+    canvas-id="paintCanvas"
+    class="paint-canvas"
+    bindtouchstart="touchStart"
+    bindtouchmove="touchMove"
+    bindtouchend="touchEnd"
+  ></canvas>
+</view>

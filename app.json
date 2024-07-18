@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/gallery/gallery"
+    "pages/gallery/gallery",
+    "pages/index/game",
+    "pages/paint/paint"
   ],
   "window": {
     "navigationStyle": "default",
