@@ -1,35 +1,60 @@
+<image src="/pages/imgs/gallery_bg.jpg" id="bgr"></image>
 <view class="container">
 
 
-
-
-    <swiper vertical="true" easing-function="easeOutCubic">
+    <swiper  easing-function="easeOutCubic">
         <swiper-item>
             <view class="card">
-                <image src="/pages/gallery/imgs/test.pngg.jpg"></image>
+                <image src="/pages/gallery/imgs/liuhelu.png"></image>
                 <view class="author-time">
-                    <view class="author">作者:米哈游</view>
-                    <view class="time-make">时间:元代</view>
-                </view>
-                <view class="desc">
-                    <view>你说得对但是原审是一款由米哈游</view>
-                </view>
-            </view>
+                    <view class="author">作者: 大师张同禄</view>
 
-        </swiper-item> <swiper-item>
-            <view class="card">
-                <image src="/pages/gallery/imgs/test.pngg.jpg"></image>
-                <view class="author-time">
-                    <view class="author">作者:米哈游</view>
-                    <view class="time-make">时间:元代</view>
                 </view>
                 <view class="desc">
-                    <view>你说得对但是原审是一款由米哈游</view>
+                    <view>
+                        《盛世六合如意炉》由大师张同禄设计制作，高66cm，宽48cm，包含大小部件400多个，复合景泰蓝、金属铸錾、花丝镶嵌、玉雕、百宝嵌5大工艺门类，先后共300多道工序全部手工制作而成。作品构思3年多时间，十易其稿，反复推敲，凝聚了作者毕生的功力和数年的心血，也是景泰蓝艺术的经典之作。
+                    </view>
                 </view>
             </view>
 
         </swiper-item>
+        <swiper-item>
+            <view class="card">
+                <image src="/pages/gallery/imgs/liuhe.png" style="flex: 8"></image>
+                <view class="author-time">
+                    <view class="author">作者:钟连盛、米振雄、戴嘉林、刘永森、金玉田、李荣魁</view>
 
+                </view>
+                <view class="desc">
+                    <view>
+                        《盛世六合》国泰尊是联合六位景泰蓝国家级大师钟连盛、米振雄、戴嘉林、刘永森、金玉田、李荣魁共同创作的作品，高约35cm（带底座）。该作品曾被作为中国非遗国礼赠予四国元首，曾获法国和迪拜两项世界级艺术大奖。
+                    </view>
+                </view>
+            </view>
+
+        </swiper-item>
+        <swiper-item>
+            <view class="card">
+                <image src="/pages/gallery/imgs/jiayuan.png" style="flex: 3.5"></image>
+                <view class="desc" style="width: 479rpx; height: 791rpx; display: flex; box-sizing: border-box">
+                    <view style="font-size: 20px; width: 437rpx; height: 387rpx; display: block; box-sizing: border-box">
+                        景泰蓝作品《家园》用绿水青山的风格描绘出大厂县的秀美风光。作品获2019中国大厂景泰蓝设计创新大赛唯一“金奖”。
+                    </view>
+                </view>
+            </view>
+
+        </swiper-item>
+       <swiper-item>
+            <view class="card">
+                <image src="/pages/gallery/imgs/last.png" style="flex: 3.5"></image>
+                <view class="desc" style="font-size:20px;" >
+                    <view  >
+                       景泰蓝《松鹤延年》瓶，器型挺拔、端庄、大气、纹样装饰主要以松树、丹顶鹤、山石等形象为主，松树四季常青也称常青树象征长寿，丹顶鹤在民间认为是长寿灵禽，体态高雅脱俗，色白又被称为仙鹤，象征高贵充满灵气，画面中的丹顶鹤形象生动姿态各异，顾盼生情。松与鹤组合的画面，寓意人们健康长寿，幸福富贵
+                    </view>
+                </view>
+            </view>
+
+        </swiper-item>
 
     </swiper>
 
