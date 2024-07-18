@@ -1,8 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/gallery/gallery",
-    "pages/timemap/timemap"
+    "pages/gallery/gallery"
   ],
   "window": {
     "navigationStyle": "default",

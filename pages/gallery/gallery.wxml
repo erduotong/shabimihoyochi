@@ -1,7 +1,6 @@
 <view class="container">
 
 
-    </view>
 
 
     <swiper vertical="true" easing-function="easeOutCubic">
