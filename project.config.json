@@ -21,9 +21,10 @@
     "tabIndent": "insertSpaces",
     "tabSize": 2
   },
-  "libVersion": "3.4.10",
+  "libVersion": "2.25.3",
   "packOptions": {
     "ignore": [],
     "include": []
-  }
+  },
+  "appid": "touristappid"
 }

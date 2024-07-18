@@ -13,8 +13,8 @@ Page({
             green: 0,
             blue: 0,
         },
-        size: 0,
-        colorShowerStyle: "background-color: rgb(0, 0, 0)",
+        size: 1,
+        colorShowerStyle: "background-color: rgb(0, 0, 1)",
         context: null,
         startX: 0,
         startY: 0,
@@ -31,7 +31,7 @@ Page({
         this.setData({context});
 
     },
-    outputImage: function (){
+    outputImage: function () {
 
     },
     paintDying: function (x, y) {
@@ -48,10 +48,10 @@ Page({
         } = this.data.colors
         wx.canvasGetImageData({
             canvasId: "paintCanvas",
-            x: this.data.endX,
-            y: this.data.endY,
-            width: 5,
-            height: 5,
+            x: this.data.moveX,
+            y: this.data.moveY,
+            width: 10,
+            height: 10,
             success: (res) => {
                 const data = res.data;
                 let foundGrey = false;
@@ -68,7 +68,7 @@ Page({
                     }
                 }
                 if (foundGrey) {//发现是金色
-                    console.log("发现金色")
+
 
                 } else {
                     context.setStrokeStyle(`rgb(${red}, ${green}, ${blue})`);
@@ -128,7 +128,7 @@ Page({
                         break;
                     }
                 }
-                console.log("foundGrey", foundGrey)
+
                 //开画
                 if (!foundGrey) {
                     wx.showToast({
@@ -161,6 +161,7 @@ Page({
     },
     mergeColor: function (x, y, width, height) {
         //获得该区域的颜色，然后再用paintDying的类似方法解决
+        const {context} = this.data
         wx.canvasGetImageData({
             canvasId: "paintCanvas",
             x: x,
@@ -169,51 +170,18 @@ Page({
             height: height,
             success: (res) => {
                 const data = res.data;
-                let totalR = 0, totalG = 0, totalB = 0, count = 0;
-
                 for (let i = 0; i < data.length; i += 4) {
+
                     const r = data[i];
                     const g = data[i + 1];
                     const b = data[i + 2];
-
-                    if (r === 253 && g === 175 && b === 7) {
-                        continue; // Skip this color
+                    const a = data[i + 3];
+                    if (a === 0) {
+                        continue;
                     }
 
-                    totalR += r;
-                    totalG += g;
-                    totalB += b;
-                    count++;
+                    console.log(r, g, b);
                 }
-
-                if (count === 0) {
-                    console.log("No colors to blend");
-                    return;
-                }
-
-                const avgR = Math.round(totalR / count);
-                const avgG = Math.round(totalG / count);
-                const avgB = Math.round(totalB / count);
-
-                const context = wx.createCanvasContext("paintCanvas");
-                context.setFillStyle(`rgb(${avgR}, ${avgG}, ${avgB})`);
-                context.fillRect(x, y, width, height);
-                for (let i = 0; i < data.length; i += 4) {
-                    const r = data[i];
-                    const g = data[i + 1];
-                    const b = data[i + 2];
-
-                    if (r === 253 && g === 175 && b === 7) {
-                        const pixelX = x + (i / 4) % width;
-                        const pixelY = y + Math.floor((i / 4) / width);
-                        context.setFillStyle(`rgb(${r}, ${g}, ${b})`);
-                        context.fillRect(pixelX, pixelY, 1, 1);
-                    }
-                }
-                context.draw(true);
-            },
-            fail: (err) => {
-                console.error("Failed to get image data:", err);
             },
         })
     },
@@ -303,7 +271,7 @@ Page({
         this.setData({
             colorShowerStyle: `background-color: ${color};`,
         });
-        console.log(color)
+
     }
     ,
     changeRed: function (e) {
