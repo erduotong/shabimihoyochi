@@ -4,7 +4,7 @@
 </mcontent>
 <view>
     <text style="position: relative; left: 591rpx; top: -49rpx">得分: {{scoredata}}</text>
-    <image src="/pages/images/basicBg.jpg"
+    <image src="/pages/images/basicBg.jpg" id="tupian"
            style="position: absolute; left: 18rpx; top: 47rpx; width: 699rpx; height: 520rpx; display: block; box-sizing: border-box"></image>
     <view id="toolbar"
           style="width: 560rpx; height: 100rpx; display: flex; box-sizing: border-box; position: absolute; left: 87rpx; top: 699rpx">

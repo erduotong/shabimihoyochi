@@ -31,6 +31,9 @@ Page({
         this.setData({context});
 
     },
+    outputImage: function (){
+
+    },
     paintDying: function (x, y) {
         const {
             moveX,
@@ -157,6 +160,7 @@ Page({
         })
     },
     mergeColor: function (x, y, width, height) {
+        //获得该区域的颜色，然后再用paintDying的类似方法解决
         wx.canvasGetImageData({
             canvasId: "paintCanvas",
             x: x,

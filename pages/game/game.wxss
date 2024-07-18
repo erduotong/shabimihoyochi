@@ -45,3 +45,8 @@ page {
     top: 600rpx;
     position: absolute
 }
+#tupian {
+  box-shadow: 0 0 5px rgba(109, 120, 118, 0.507),
+              0 0 20px rgba(109, 120, 118, 1),
+              0 0 30px rgba(109, 120, 118, 1);
+}
