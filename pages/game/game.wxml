@@ -12,6 +12,7 @@
         <image src="/pages/images/glue.jpg" class="tools" bindtap="changePlayingMode" data-index="1"></image>
         <image src="/pages/images/golden_shit.jpg" class="tools" bindtap="changePlayingMode" data-index="2"></image>
         <image src="/pages/images/plane_cub.png" class="tools" bindtap="changePlayingMode" data-index="3"></image>
+        <image src="/pages/images/merrge_fovl.png" class="tools" bindtap="changePlayingMode" data-index="4"></image>
     </view>
     <view id="color_shower"
           style="{{colorShowerStyle}};display: block; box-sizing: border-box; position: relative; left: 591rpx; top: 908rpx"></view>

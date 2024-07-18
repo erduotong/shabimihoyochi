@@ -22,7 +22,7 @@ Page({
         moveY: 0,//上一个move的y
         endX: 0,
         endY: 0,
-        playingMode: "1", //1=打胶 2=掐线 3=打色
+        playingMode: "1", //1=打胶 2=掐线 3=打色 4=混色
     },
 
     onLoad: function () {
@@ -128,7 +128,11 @@ Page({
                 console.log("foundGrey", foundGrey)
                 //开画
                 if (!foundGrey) {
-                    console.log("这里没涂胶水")
+                    wx.showToast({
+                        title: "请在胶水上掐丝",
+                        icon: "error",
+                        duration: 500,
+                    })
                     return
                 }
 
