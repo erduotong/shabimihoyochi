@@ -170,6 +170,13 @@ Page({
             height: height,
             success: (res) => {
                 const data = res.data;
+                const total = {
+                    num: 0,
+                    red: 0,
+                    green: 0,
+                    blue: 0,
+                }
+                let points = []
                 for (let i = 0; i < data.length; i += 4) {
 
                     const r = data[i];
@@ -179,9 +186,41 @@ Page({
                     if (a === 0) {
                         continue;
                     }
-
-                    console.log(r, g, b);
+                    if (r === 253 && g === 175 && b === 7) {
+                        continue
+                    }
+                    total.num++;
+                    total.red += r;
+                    total.green += g;
+                    total.blue += b;
+                    //计算该像素点的坐标
+                    const pixelX = (i / 4) % width;
+                    const pixelY = Math.floor((i / 4) / width);
+                    points.push({
+                        x: pixelX + x,
+                        y: pixelY + y,
+                    })
                 }
+                if (total.num === 0) {
+                    return;
+                }
+                const averageColor = {
+                    red: total.red / total.num,
+                    green: total.green / total.num,
+                    blue: total.blue / total.num,
+                }
+
+                context.setStrokeStyle(`rgb(${averageColor.red}, ${averageColor.green}, ${averageColor.blue})`);
+                context.setLineWidth(1);
+                context.setLineCap("butt");
+                context.setLineJoin("miter");
+                context.beginPath();
+                context.moveTo(points[0].x, points[0].y);
+                for (let i = 1; i < points.length; i++) {
+                    context.lineTo(points[i].x, points[i].y);
+                }
+                context.stroke();
+                context.draw(true);
             },
         })
     },
