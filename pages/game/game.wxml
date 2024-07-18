@@ -5,7 +5,7 @@
 <view>
     <text style="position: relative; left: 591rpx; top: -49rpx">得分: {{scoredata}}</text>
     <image src="/pages/images/basicBg.jpg"
-           style="position: absolute; left: 18rpx; top: 46rpx; width: 699rpx; height: 520rpx; display: block; box-sizing: border-box"></image>
+           style="position: absolute; left: 18rpx; top: 47rpx; width: 699rpx; height: 520rpx; display: block; box-sizing: border-box"></image>
     <view id="toolbar"
           style="width: 560rpx; height: 100rpx; display: flex; box-sizing: border-box; position: absolute; left: 87rpx; top: 699rpx">
 
@@ -13,7 +13,27 @@
         <image src="/pages/images/golden_shit.jpg" class="tools" bindtap="changePlayingMode" data-index="2"></image>
         <image src="/pages/images/plane_cub.png" class="tools" bindtap="changePlayingMode" data-index="3"></image>
     </view>
-
+    <view id="color_shower"
+          style="{{colorShowerStyle}};display: block; box-sizing: border-box; position: relative; left: 591rpx; top: 908rpx"></view>
+    <view>
+        <text style="color: red; position: absolute; left: 87rpx; top: 850rpx; width: 114rpx; height: 41rpx; display: block; box-sizing: border-box">红色</text>
+        <slider bindchange="changeRed" show-value min="0" backgroundColor="red" max="255" id="red"
+                style="position: absolute; left: 20rpx; top: 872rpx; width: 370rpx; height: 41rpx; display: block; box-sizing: border-box"
+                class="slidebars"
+                activeColor="red"></slider>
+        <text style="color: green; position: absolute; left: 87rpx; top: 967rpx">绿色</text>
+        <slider bindchange="changeGreen" show-value activeColor="green" min="0" max="255" backgroundColor="green"
+                id="green" class="slidebars"
+                style="position: absolute; left: 20rpx; top: 987rpx; width: 370rpx; height: 41rpx; display: block; box-sizing: border-box"></slider>
+        <text style="color: royalblue; position: absolute; left: 88rpx; top: 1065rpx">蓝色</text>
+        <slider bindchange="changeBlue" show-value activeColor="blue" backgroundColor="blue" min="0" max="255" id="blue"
+                style="position: absolute; left: 20rpx; top: 1106rpx; width: 370rpx; height: 41rpx; display: block; box-sizing: border-box"
+                class="slidebars"></slider>
+        <text style="position: absolute; left: 56rpx; top: 1193rpx">线条粗细</text>
+        <slider bindchange="changeSize" show-value   min="1" max="25"
+                style="position: absolute; left: 20rpx; top: 1239rpx; width: 370rpx; height: 41rpx; display: block; box-sizing: border-box"
+                class="slidebars"></slider>
+    </view>
     <canvas
             id="paintCanvas2"
             canvas-id="paintCanvas"
@@ -21,7 +41,7 @@
             bindtouchstart="touchStart"
             bindtouchmove="touchMove"
             bindtouchend="touchEnd"
-            style="position: relative; left: 18rpx; top: 4rpx; width: 699rpx; height: 520rpx; display: block; box-sizing: border-box"></canvas>
+            style="position: relative; left: 18rpx; top: -89rpx; width: 699rpx; height: 520rpx; display: block; box-sizing: border-box"></canvas>
 
 
 </view>
