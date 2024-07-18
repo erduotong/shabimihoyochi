@@ -2,15 +2,15 @@
 <view class="container">
     <mcontent detail="/pages/imgs/index_bg.jpg" type="background-image"
               style="z-index: -1; position: fixed; height: 1500rpx"></mcontent>
-    <view class="link">
-        <navigator url="/pages/gallery/gallery">画廊</navigator>
+    <view class="link" style="position: absolute; left: 502rpx; top: 1018rpx">
+        <navigator url="/pages/gallery/gallery">作品欣赏</navigator>
     </view>
-    <view class="link">
-        <navigator url="/pages/timemap/timemap">小游戏</navigator>
+    <view class="link" style="position: absolute; left: 502rpx; top: 1162rpx">
+        <navigator url="/pages/timemap/timemap">体验制作</navigator>
     </view>
 
     <text id="desc"
-          style="position: relative; left: 234rpx; top: -514rpx; width: 289rpx; height: 724rpx; display: block; box-sizing: border-box">
+          style="position: relative; left: 220rpx; top: 200rpx; width: 289rpx; height: 724rpx; display: block; box-sizing: border-box">
         {{text}}
     </text>
 </view>

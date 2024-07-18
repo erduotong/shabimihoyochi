@@ -35,7 +35,7 @@ swiper-item {
 }
 
 .card {
-    margin-top: 70px;
+    margin-top: 20px;
 
     background-color: #345e9c; /* Light grey background for better visibility */
     border: 1px solid #ccc; /* Adding a subtle border */
@@ -44,7 +44,7 @@ swiper-item {
     margin-bottom: 20px;
     box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     width: 80%;
-    height: 87%;
+    height: 90%;
     display: flex;
     flex-direction: column;
 }

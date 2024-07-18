@@ -23,11 +23,10 @@
     text-orientation: mixed; /* Rotates text 90 degrees */
     overflow: hidden; /* Ensure the text doesn't overflow */
     white-space: wrap; /* Prevent the text from wrapping */
-    text-decoration: underline;
-    text-underline-offset: 8px;
+
 
     line-height: 2;
-    font-size: 15px;
+    font-size: 12px;
      transition: all 0.5s ease; /* Add transition for smooth appearance */
 }
 
