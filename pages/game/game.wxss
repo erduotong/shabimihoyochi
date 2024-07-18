@@ -1,22 +1,34 @@
-page{
-  width: 100%;
-  height: 100%;
+page {
+    width: 100%;
+    height: 100%;
 }
+
 .container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  background-color: #f0f0f0;
-  }
-  
-  
-  .paint-canvas {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+
+.paint-canvas {
     width: 200%;
     height: 100%;
-    background-color: transparent; 
-  }
+    background-color: transparent;
+}
 
-  /* .border: 2px solid :#345e9c;  */
+#toolbar {
+    background-color: white; /* 白色背景 */
+    border-radius: 12px; /* 圆角 */
+    padding: 10px 20px; /* 内边距 */
+    display: flex; /* 使用flex布局 */
+    justify-content: space-around; /* 水平等间距 */
+    align-items: center; /* 垂直居中 */
+}
+
+.tools {
+    height: 90rpx;
+    width: 90rpx;
+}

@@ -8,6 +8,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/game/game",
+          "pathName": "pages/game/game",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "pages/gallery/gallery",
           "pathName": "pages/gallery/gallery",
           "query": "",

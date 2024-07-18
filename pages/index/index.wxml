@@ -6,7 +6,7 @@
         <navigator url="/pages/gallery/gallery">作品欣赏</navigator>
     </view>
     <view class="link" style="position: absolute; left: 502rpx; top: 1162rpx">
-        <navigator url="/pages/timemap/timemap">体验制作</navigator>
+        <navigator url="/pages/game/game">体验制作</navigator>
     </view>
 
     <text id="desc"

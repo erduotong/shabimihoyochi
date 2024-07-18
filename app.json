@@ -2,7 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/gallery/gallery",
-    "pages/index/game",
+    "pages/game/game",
     "pages/paint/paint"
   ],
   "window": {

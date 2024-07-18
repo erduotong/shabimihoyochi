@@ -1,23 +1,27 @@
+<mcontent style="z-index: -2; position: fixed; height: 1500rpx; left: 0rpx; top: -22rpx"
+          detail="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201908%2F21%2F20190821073718_kdmxf.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1723789144&t=537f6e28b43bab956d549af35c9893ad"
+          type="background-image">
+</mcontent>
+<view>
+    <text style="position: relative; left: 591rpx; top: -49rpx">得分: {{scoredata}}</text>
+    <image src="/pages/images/basicBg.jpg"
+           style="position: absolute; left: 18rpx; top: 46rpx; width: 699rpx; height: 520rpx; display: block; box-sizing: border-box"></image>
+    <view id="toolbar"
+          style="width: 560rpx; height: 100rpx; display: flex; box-sizing: border-box; position: absolute; left: 87rpx; top: 699rpx">
 
- <mcontent detail="http://osscdn.ndszgb.com/resource_1701/faL/3xSsGv2hOA5MxKs4cu4F.jpg" style="position: relative; left: 33rpx; top: 150rpx; width: 699rpx; height: 572rpx; display: block; box-sizing: border-box; z-index: -1; background-color: transparent" type="background-image">
-  </mcontent>
-  <mcontent style="z-index: -2; position: fixed; height: 1500rpx; left: 0rpx; top: -22rpx" detail="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201908%2F21%2F20190821073718_kdmxf.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1723789144&t=537f6e28b43bab956d549af35c9893ad" type="background-image">
-  </mcontent>
-  <button style="position: relative; left: -227rpx; width: 229rpx; height: 100rpx; display: block; box-sizing: border-box; top: 339rpx; color: #AC814EFF" type="button" detail="返回" link="/pages/images/QQ图片20240717140831.jpg">{{isPlaying ?'返回':'返回'}}
+        <image src="/pages/images/glue.jpg" class="tools" bindtap="changePlayingMode" data-index="1"></image>
+        <image src="/pages/images/golden_shit.jpg" class="tools" bindtap="changePlayingMode" data-index="2"></image>
+        <image src="/pages/images/plane_cub.png" class="tools" bindtap="changePlayingMode" data-index="3"></image>
+    </view>
 
-  </button>
-  <button  bindtap='starttu' style="position: relative; left: 201rpx; top: 239rpx; width: 229rpx; height: 100rpx; display: block; box-sizing: border-box; color: #AC814EFF">{{isPlaying ? '暂停':'开始'}}
-  </button>
-
-  <button  style="position: relative; left: -227rpx; top: -737rpx; width: 229rpx; height: 75rpx; display: block; box-sizing: border-box; color: #AC814EFF"  bindtap="undo">撤销</button>
- <text  style="position: relative; left: 596rpx; top: -795rpx; color: #AC814EFF">得分: {{scoredata}}</text>
- <canvas
- id="paintCanvas2"
-    canvas-id="paintCanvas"
-    class="paint-canvas"
-    bindtouchstart="touchStart"
-    bindtouchmove="touchMove"
-    bindtouchend="touchEnd"
-   style="position: relative; left: 33rpx; top: -737rpx; width: 699rpx; height: 572rpx; display: block; box-sizing: border-box"></canvas>
+    <canvas
+            id="paintCanvas2"
+            canvas-id="paintCanvas"
+            class="paint-canvas"
+            bindtouchstart="touchStart"
+            bindtouchmove="touchMove"
+            bindtouchend="touchEnd"
+            style="position: relative; left: 18rpx; top: 4rpx; width: 699rpx; height: 520rpx; display: block; box-sizing: border-box"></canvas>
 
 
+</view>
