@@ -1,0 +1,407 @@
+{
+  "key": "EDU",
+  "label": "教育组件",
+  "components": {
+    "mcontent": {
+      "key": "mcontent",
+      "label": "无预设",
+      "icon": "https://t73-cloudfile.oss-cn-zhangjiakou.aliyuncs.com/super/mini/ide_assets/components/icons/mcontent/mcontent.jpg",
+      "properties": [{
+        "key": "type",
+        "type": ["String"],
+        "desc": "内容形式",
+        "label": ""
+      }, {
+        "key": "detail",
+        "type": ["String"],
+        "desc": "内容细节（如显示的文字、图片的地址）",
+        "label": ""
+      }, {
+        "key": "link",
+        "type": ["String"],
+        "desc": "点击后的跳转页面路径（空则为不跳转）",
+        "label": ""
+      }],
+      "events": [],
+      "tpl": "<mcontent />",
+      "path": "/components/multi-content/multi-content"
+    },
+    "mcontent-text": {
+      "label": "预设文字",
+      "icon": "https://t73-cloudfile.oss-cn-zhangjiakou.aliyuncs.com/super/mini/ide_assets/components/icons/mcontent/mcontent-textarea.jpg",
+      "properties": [{
+        "key": "type",
+        "type": ["String"],
+        "desc": "内容形式",
+        "label": ""
+      }, {
+        "key": "detail",
+        "type": ["String"],
+        "desc": "内容细节（如显示的文字、图片的地址）",
+        "label": ""
+      }, {
+        "key": "link",
+        "type": ["String"],
+        "desc": "点击后的跳转页面路径（空则为不跳转）",
+        "label": ""
+      }],
+      "events": [],
+      "tpl": "<mcontent type=\"text\" detail=\"这是一段文字\" />",
+      "path": "/components/multi-content/multi-content"
+    },
+    "mcontent-title": {
+      "label": "预设标题",
+      "icon": "https://t73-cloudfile.oss-cn-zhangjiakou.aliyuncs.com/super/mini/ide_assets/components/icons/mcontent/mcontent-title.jpg",
+      "properties": [{
+        "key": "type",
+        "type": ["String"],
+        "desc": "内容形式",
+        "label": ""
+      }, {
+        "key": "detail",
+        "type": ["String"],
+        "desc": "内容细节（如显示的文字、图片的地址）",
+        "label": ""
+      }, {
+        "key": "link",
+        "type": ["String"],
+        "desc": "点击后的跳转页面路径（空则为不跳转）",
+        "label": ""
+      }],
+      "events": [],
+      "tpl": "<mcontent type=\"title\" detail=\"这是标题\" />",
+      "path": "/components/multi-content/multi-content"
+    },
+    "mcontent-heading": {
+      "label": "预设小标题",
+      "icon": "https://t73-cloudfile.oss-cn-zhangjiakou.aliyuncs.com/super/mini/ide_assets/components/icons/mcontent/mcontent-heading.jpg",
+      "properties": [{
+        "key": "type",
+        "type": ["String"],
+        "desc": "内容形式",
+        "label": ""
+      }, {
+        "key": "detail",
+        "type": ["String"],
+        "desc": "内容细节（如显示的文字、图片的地址）",
+        "label": ""
+      }, {
+        "key": "link",
+        "type": ["String"],
+        "desc": "点击后的跳转页面路径（空则为不跳转）",
+        "label": ""
+      }],
+      "events": [],
+      "tpl": "<mcontent type=\"heading\" detail=\"这是小标题\" />",
+      "path": "/components/multi-content/multi-content"
+    },
+    "mcontent-image": {
+      "label": "预设图片",
+      "icon": "https://t73-cloudfile.oss-cn-zhangjiakou.aliyuncs.com/super/mini/ide_assets/components/icons/mcontent/mcontent-image.jpg",
+      "properties": [{
+        "key": "type",
+        "type": ["String"],
+        "desc": "内容形式",
+        "label": ""
+      }, {
+        "key": "detail",
+        "type": ["String"],
+        "desc": "内容细节（如显示的文字、图片的地址）",
+        "label": ""
+      }, {
+        "key": "link",
+        "type": ["String"],
+        "desc": "点击后的跳转页面路径（空则为不跳转）",
+        "label": ""
+      }],
+      "events": [],
+      "tpl": "<mcontent type=\"image\" detail=\"https://t73-cloudfile.oss-cn-zhangjiakou.aliyuncs.com/super/mini/self/placeholder.jpg\" />",
+      "path": "/components/multi-content/multi-content"
+    },
+    "mcontent-bgi": {
+      "label": "预设背景图片",
+      "icon": "https://t73-cloudfile.oss-cn-zhangjiakou.aliyuncs.com/super/mini/ide_assets/components/icons/mcontent/mcontent-bgi.jpg",
+      "properties": [{
+        "key": "type",
+        "type": ["String"],
+        "desc": "内容形式",
+        "label": ""
+      }, {
+        "key": "detail",
+        "type": ["String"],
+        "desc": "内容细节（如显示的文字、图片的地址）",
+        "label": ""
+      }, {
+        "key": "link",
+        "type": ["String"],
+        "desc": "点击后的跳转页面路径（空则为不跳转）",
+        "label": ""
+      }],
+      "events": [],
+      "tpl": "<mcontent style=\"z-index: -999; position: fixed; height: 100vh\" type=\"background-image\" detail=\"https://t73-cloudfile.oss-cn-zhangjiakou.aliyuncs.com/super/mini/self/placeholder.jpg\" />",
+      "path": "/components/multi-content/multi-content"
+    },
+    "mcontent-video": {
+      "label": "预设视频",
+      "icon": "https://t73-cloudfile.oss-cn-zhangjiakou.aliyuncs.com/super/mini/ide_assets/components/icons/mcontent/mcontent-video.jpg",
+      "properties": [{
+        "key": "type",
+        "type": ["String"],
+        "desc": "内容形式",
+        "label": ""
+      }, {
+        "key": "detail",
+        "type": ["String"],
+        "desc": "内容细节（如显示的文字、图片的地址）",
+        "label": ""
+      }, {
+        "key": "link",
+        "type": ["String"],
+        "desc": "点击后的跳转页面路径（空则为不跳转）",
+        "label": ""
+      }],
+      "events": [],
+      "tpl": "<mcontent type=\"video\" detail=\"https://t73-cloudfile.oss-cn-zhangjiakou.aliyuncs.com/super/mini/self/placeholder.jpg\" />",
+      "path": "/components/multi-content/multi-content"
+    },
+    "mcontent-callout": {
+      "label": "预设强调",
+      "icon": "https://t73-cloudfile.oss-cn-zhangjiakou.aliyuncs.com/super/mini/ide_assets/components/icons/mcontent/mcontent-callout.jpg",
+      "properties": [{
+        "key": "type",
+        "type": ["String"],
+        "desc": "内容形式",
+        "label": ""
+      }, {
+        "key": "detail",
+        "type": ["String"],
+        "desc": "内容细节（如显示的文字、图片的地址）",
+        "label": ""
+      }, {
+        "key": "link",
+        "type": ["String"],
+        "desc": "点击后的跳转页面路径（空则为不跳转）",
+        "label": ""
+      }],
+      "events": [],
+      "tpl": "<mcontent type=\"callout\" detail=\"这是一段突出显示的文字\" />",
+      "path": "/components/multi-content/multi-content"
+    },
+    "mcontent-block": {
+      "label": "预设块",
+      "icon": "https://t73-cloudfile.oss-cn-zhangjiakou.aliyuncs.com/super/mini/ide_assets/components/icons/mcontent/mcontent-block.jpg",
+      "properties": [{
+        "key": "type",
+        "type": ["String"],
+        "desc": "内容形式",
+        "label": ""
+      }, {
+        "key": "detail",
+        "type": ["String"],
+        "desc": "内容细节（如显示的文字、图片的地址）",
+        "label": ""
+      }, {
+        "key": "link",
+        "type": ["String"],
+        "desc": "点击后的跳转页面路径（空则为不跳转）",
+        "label": ""
+      }],
+      "events": [],
+      "tpl": "<mcontent type=\"block\" detail=\"rgba(255,255,255,0.5)\" />",
+      "path": "/components/multi-content/multi-content"
+    },
+    "mcontent-divider": {
+      "label": "预设分割",
+      "icon": "https://t73-cloudfile.oss-cn-zhangjiakou.aliyuncs.com/super/mini/ide_assets/components/icons/mcontent/mcontent-divider.jpg",
+      "properties": [{
+        "key": "type",
+        "type": ["String"],
+        "desc": "内容形式",
+        "label": ""
+      }, {
+        "key": "detail",
+        "type": ["String"],
+        "desc": "内容细节（如显示的文字、图片的地址）",
+        "label": ""
+      }, {
+        "key": "link",
+        "type": ["String"],
+        "desc": "点击后的跳转页面路径（空则为不跳转）",
+        "label": ""
+      }],
+      "events": [],
+      "tpl": "<mcontent type=\"divider\" />",
+      "path": "/components/multi-content/multi-content"
+    },
+    "itable": {
+      "key": "itable",
+      "label": "无预设",
+      "icon": "https://t73-cloudfile.oss-cn-zhangjiakou.aliyuncs.com/super/mini/ide_assets/components/icons/itable/itable.jpg",
+      "properties": [{
+        "key": "id",
+        "type": ["String"],
+        "desc": "用于在js文件中选择该组件",
+        "label": ""
+      }, {
+        "key": "title",
+        "type": ["String"],
+        "desc": "标题",
+        "label": ""
+      }, {
+        "key": "width",
+        "type": ["String"],
+        "desc": "宽度（仅支持rpx，如：600rpx）",
+        "label": ""
+      }, {
+        "key": "height",
+        "type": ["String"],
+        "desc": "高度（仅支持rpx，如：800rpx）",
+        "label": ""
+      }, {
+        "key": "keys",
+        "type": ["Array"],
+        "desc": "字段",
+        "label": ""
+      }, {
+        "key": "records",
+        "type": ["Array"],
+        "desc": "所包含的记录",
+        "label": ""
+      }, {
+        "key": "globalStorage",
+        "type": ["String"],
+        "desc": "托管的全局数据",
+        "label": ""
+      }, {
+        "key": "hideHeader",
+        "type": ["Boolean"],
+        "desc": "是否隐藏表头",
+        "label": ""
+      }, {
+        "key": "hidden",
+        "type": ["Boolean"],
+        "desc": "是否隐藏表格",
+        "label": ""
+      }, {
+        "key": "transpose",
+        "type": ["Boolean"],
+        "desc": "是否转置（表头显示在左侧第一列）",
+        "label": ""
+      }, {
+        "key": "showAddButton",
+        "type": ["Boolean"],
+        "desc": "是否显示新增记录按钮",
+        "label": ""
+      }],
+      "events": [{
+        "key": "bindrecordsupdate",
+        "desc": "表格数据更新时触发",
+        "label": ""
+      }],
+      "tpl": "<itable />",
+      "path": "/components/interact-table/interact-table"
+    },
+    "tcanvas": {
+      "label": "无预设",
+      "icon": "https://t73-cloudfile.oss-cn-zhangjiakou.aliyuncs.com/super/mini/ide_assets/components/icons/tcanvas/tcanvas.jpg",
+      "properties": [{
+        "key": "id",
+        "type": ["String"],
+        "desc": "用于在js文件中选择该组件",
+        "label": ""
+      }, {
+        "key": "width",
+        "type": ["Number"],
+        "desc": "宽度（仅支持rpx，如：600）",
+        "label": ""
+      }, {
+        "key": "height",
+        "type": ["Number"],
+        "desc": "高度（仅支持rpx，如：800）",
+        "label": ""
+      }, {
+        "key": "repl",
+        "type": ["Boolean"],
+        "desc": "是否显示repl",
+        "label": ""
+      }, {
+        "key": "background-color",
+        "type": ["String"],
+        "desc": "画布的背景颜色",
+        "label": ""
+      }, {
+        "key": "background-image",
+        "type": ["String"],
+        "desc": "画布的背景图片",
+        "label": ""
+      }],
+      "events": [],
+      "tpl": "<turtle-canvas />",
+      "path": "/components/turtle-canvas/turtle-canvas"
+    },
+    "tcanvas-repl": {
+      "label": "REPL",
+      "icon": "https://t73-cloudfile.oss-cn-zhangjiakou.aliyuncs.com/super/mini/ide_assets/components/icons/tcanvas/tcanvas.jpg",
+      "properties": [{
+        "key": "id",
+        "type": ["String"],
+        "desc": "用于在js文件中选择该组件",
+        "label": ""
+      }, {
+        "key": "width",
+        "type": ["Number"],
+        "desc": "宽度（仅支持rpx，如：600）",
+        "label": ""
+      }, {
+        "key": "height",
+        "type": ["Number"],
+        "desc": "高度（仅支持rpx，如：800）",
+        "label": ""
+      }, {
+        "key": "repl",
+        "type": ["Boolean"],
+        "desc": "是否显示repl",
+        "label": ""
+      }, {
+        "key": "background-color",
+        "type": ["String"],
+        "desc": "画布的背景颜色",
+        "label": ""
+      }, {
+        "key": "background-image",
+        "type": ["String"],
+        "desc": "画布的背景图片",
+        "label": ""
+      }],
+      "events": [],
+      "tpl": "<turtle-canvas repl/>",
+      "path": "/components/turtle-canvas/turtle-canvas"
+    }
+  },
+  "common": {
+    "properties": {},
+    "events": {}
+  },
+  "menu": [{
+    "key": "menu-basic",
+    "label": "基础",
+    "submenu": [{
+      "key": "subMenu-multicontent",
+      "label": "内容",
+      "components": [
+        "mcontent", "mcontent-text", "mcontent-title",
+        "mcontent-heading", "mcontent-image", "mcontent-bgi",
+        "mcontent-video", "mcontent-callout", "mcontent-block",
+        "mcontent-divider", "mcontent-button"
+      ]
+    }, {
+      "key": "subMenu-interacttable",
+      "label": "表格",
+      "components": ["itable"]
+    }, {
+      "key": "subMenu-turtlecanvas",
+      "label": "绘图",
+      "components": ["tcanvas", "tcanvas-repl"]
+    }]
+  }]
+}

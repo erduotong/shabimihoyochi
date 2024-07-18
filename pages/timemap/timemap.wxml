@@ -1,0 +1,6 @@
+<view class="container">
+    <view class="time-point"></view>
+    <view class="time-point"></view>
+    <view class="time-point"></view>
+    <canvas canvas-id="lineCanvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"></canvas>
+</view>

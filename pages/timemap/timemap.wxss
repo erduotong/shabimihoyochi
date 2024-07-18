@@ -1,0 +1,30 @@
+
+.container {
+    position: relative;
+    height: 100vh; /* Adjust based on your needs */
+    width: 100%; /* Adjust based on your needs */
+}
+
+.time-point {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    left: 50%; /* Center the squares horizontally */
+}
+
+.time-point:nth-child(1) {
+    top: 20%; /* Adjust the percentage to distribute vertically */
+    left: 20%;
+}
+
+.time-point:nth-child(2) {
+    top: 40%;
+    right: 20%;
+}
+
+.time-point:nth-child(3) {
+    top: 60%;
+    left: 40%
+}
+

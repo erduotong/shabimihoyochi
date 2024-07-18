@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "turtle-canvas": "/components/turtle-canvas/turtle-canvas",
+    "itable": "/components/interact-table/interact-table",
+    "mcontent": "/components/multi-content/multi-content",
+    "multi-content": "/components/multi-content/multi-content"
+  }
+}

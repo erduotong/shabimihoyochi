@@ -1,0 +1,37 @@
+<view class="container">
+
+
+    </view>
+
+
+    <swiper vertical="true" easing-function="easeOutCubic">
+        <swiper-item>
+            <view class="card">
+                <image src="/pages/gallery/imgs/test.pngg.jpg"></image>
+                <view class="author-time">
+                    <view class="author">作者:米哈游</view>
+                    <view class="time-make">时间:元代</view>
+                </view>
+                <view class="desc">
+                    <view>你说得对但是原审是一款由米哈游</view>
+                </view>
+            </view>
+
+        </swiper-item> <swiper-item>
+            <view class="card">
+                <image src="/pages/gallery/imgs/test.pngg.jpg"></image>
+                <view class="author-time">
+                    <view class="author">作者:米哈游</view>
+                    <view class="time-make">时间:元代</view>
+                </view>
+                <view class="desc">
+                    <view>你说得对但是原审是一款由米哈游</view>
+                </view>
+            </view>
+
+        </swiper-item>
+
+
+    </swiper>
+
+</view>

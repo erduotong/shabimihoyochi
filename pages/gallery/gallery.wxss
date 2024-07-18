@@ -1,0 +1,102 @@
+/* pages/gallery/gallery.wxss */
+.container {
+
+}
+
+#nafv {
+    width: 100%;
+}
+
+.backToTimeline {
+    position: fixed; /* Fixed position relative to the viewport */
+    right: 20rpx; /* 20rpx from the right edge of the viewport */
+    top: 20rpx; /* 20rpx from the top edge of the viewport */
+    background-color: blue;
+    color: white;
+    border-radius: 8px;
+    text-align: center; /* 添加此行使文本居中对齐 */
+
+
+    margin-top: 0; /* Resetting margin-top as it's now positioned with top property */
+    margin-right: 0; /* Resetting margin-right as it's now positioned with right property */
+}
+
+
+swiper {
+    width: 100%;
+    height: 100vh;
+
+}
+
+swiper-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin-top: 70px;
+
+    background-color: #345e9c; /* Light grey background for better visibility */
+    border: 1px solid #ccc; /* Adding a subtle border */
+    border-radius: 8px; /* Rounded corners for a card-like appearance */
+    padding: 20px 40px; /* Space inside the card */
+    margin-bottom: 20px;
+    box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    width: 80%;
+    height: 87%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card image {
+    flex: 4;
+    width: 100%;
+    border-radius: 8px; /* Rounded corners for the image */
+
+}
+
+.card .desc {
+    flex: 3;
+    background-color: #ffffff; /* White background */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside the description box */
+    margin: 10px 0; /* Margin outside the description box */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    word-wrap: break-word; /* Ensure text wraps */
+    white-space: normal; /* Allow natural text wrapping */
+
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text */
+
+}
+
+.author-time {
+    flex: 1;
+    background-color: #ffffff; /* White background */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside the description box */
+    margin: 10px 0; /* Margin outside the description box */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    word-wrap: break-word; /* Ensure text wraps */
+    white-space: normal; /* Allow natural text wrapping */
+
+    display: flex; /* Use flexbox to center content */
+
+    align-items: center; /* Center vertically */
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.author {
+    /*    作者*/
+}
+
+.time-make {
+    /*    制作时间*/
+}

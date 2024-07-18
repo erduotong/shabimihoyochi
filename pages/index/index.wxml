@@ -1,0 +1,13 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+    <mcontent detail="/pages/imgs/index_bg.jpg" type="background-image"
+              style="z-index: -1; position: fixed; height: 1500rpx"></mcontent>
+    <view class="link">
+        <navigator url="/pages/gallery/gallery">画廊</navigator>
+    </view>
+    <view class="link">
+        <navigator url="/pages/timemap/timemap">时间轴</navigator>
+    </view>
+
+<text id="desc" style="position: relative; left: 224rpx; top: -455rpx">景泰蓝（Cloisonne），又称做“铜胎掐丝珐琅”，是一种将铜与珐琅结合，经过多道工序烧制而成的工艺品。由于工艺繁琐、复杂，代表着中华民族传统工艺的巅峰，景泰蓝是国家级非物质文化遗产之一。</text>
+</view>

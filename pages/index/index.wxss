@@ -1,0 +1,27 @@
+/* pages/index/index.wxss */
+.link {
+    border: 2px solid #345e9c; /* Example border: 2px solid with a color */
+    padding: 10px; /* Adds some space inside the border */
+    margin: 20px 0; /* Adds some space outside the border, between the links */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the link */
+    display: flex; /* Ensures the content is flexibly arranged */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    border-radius: 8px; /* Optional: Adds rounded corners to the border */
+    color: white;
+
+}
+
+.container {
+    height: 100vh; /* Sets the height of the container to fill the viewport */
+
+}
+
+#desc {
+    color: #ac814e;
+    font-size: 20px;
+    direction: rtl;
+    writing-mode: vertical-rl;
+
+    max-height: 60vh;
+}
