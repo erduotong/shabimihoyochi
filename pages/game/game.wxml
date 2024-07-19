@@ -15,7 +15,7 @@
         <image src="/pages/images/merrge_fovl.png" class="tools" bindtap="changePlayingMode" data-index="4"></image>
     </view>
     <view id="color_shower"
-          style="{{colorShowerStyle}};display: block; box-sizing: border-box; position: relative; left: 591rpx; top: 908rpx"></view>
+          style="{{colorShowerStyle}};position: relative; left: 460rpx; top: 831rpx"></view>
     <view>
         <text style="color: red; position: absolute; left: 87rpx; top: 850rpx; width: 114rpx; height: 41rpx; display: block; box-sizing: border-box">红色</text>
         <slider bindchange="changeRed" show-value min="0" backgroundColor="red" max="255" id="red"
@@ -31,10 +31,16 @@
                 style="position: absolute; left: 20rpx; top: 1106rpx; width: 370rpx; height: 41rpx; display: block; box-sizing: border-box"
                 class="slidebars"></slider>
         <text style="position: absolute; left: 56rpx; top: 1193rpx">线条粗细</text>
-        <slider bindchange="changeSize" show-value   min="1" max="25"
+        <slider bindchange="changeSize" show-value min="1" max="25"
                 style="position: absolute; left: 20rpx; top: 1239rpx; width: 370rpx; height: 41rpx; display: block; box-sizing: border-box"
                 class="slidebars"></slider>
     </view>
+    <button style="position: absolute; top: 1029rpx; left: 447rpx; width: 270rpx; height: 97rpx; display: block; box-sizing: border-box">
+        分享图片
+    </button>
+    <button style="position: absolute; top: 1185rpx; left: 447rpx; width: 270rpx; height: 97rpx; display: block; box-sizing: border-box"
+            bindtap="resetCanvas">重置
+    </button>
     <canvas
             id="paintCanvas2"
             canvas-id="paintCanvas"
@@ -42,7 +48,7 @@
             bindtouchstart="touchStart"
             bindtouchmove="touchMove"
             bindtouchend="touchEnd"
-            style="position: relative; left: 18rpx; top: -89rpx; width: {{CanvasWidth}}rpx; height: {{CanvasHeight}}rpx; display: block; box-sizing: border-box"></canvas>
+            style="position: relative; left: 18rpx; top: -91rpx; width: {{CanvasWidth}}rpx; height: {{CanvasHeight}}rpx; display: block; box-sizing: border-box"></canvas>
 
 
 </view>

@@ -338,5 +338,59 @@ Page({
             "size": value,
         })
     },
+    saveImage: function () {
+        //转存图片
+        wx.canvasToTempFilePath({
+            canvasId: "paintCanvas",
+            quality: 1,
+            success: function (res) {
+                const tempFilePath = res.tempFilePath;
+                wx.saveImageToPhotosAlbum({
+                    filePath: tempFilePath,
+                    success() {
+                        wx.showToast({
+                            title: "保存成功",
+                            icon: "success",
+                            duration: 2000,
+                        })
 
+                    },
+                    fail(err) {
+                        console.error("保存失败:", err);
+                        if (err.errMsg === "saveImageToPhotosAlbum:fail auth deny") {
+                            console.log("用户拒绝授权");
+                            wx.openSetting({
+                                success(settingdata) {
+                                    if (settingdata.authSetting["scope.writePhotosAlbum"]) {
+                                        console.log("获取权限成功，再次点击图片保存到相册");
+                                    } else {
+                                        console.log("获取权限失败");
+                                    }
+                                },
+                            })
+                        }
+                    },
+                })
+            },
+        })
+    },
+    resetCanvas: function () {
+        wx.showModal({
+            title: "警告",
+            content: "是否要清空已进行的操作？该操作不可逆",
+            success: (res) => {
+                if (res.confirm) {
+                    //清空画布
+                    const {context} = this.data;
+                    context.draw();
+                } else if (res.cancel) {
+                    wx.showToast({
+                        title: "操作已取消",
+                        icon: "error",
+                        duration: 500,
+                    })
+                }
+            },
+        })
+    },
 })
