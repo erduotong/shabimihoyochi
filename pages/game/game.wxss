@@ -17,20 +17,23 @@ page {
     width: 200%;
     height: 100%;
     background-color: transparent;
+
 }
 
 #toolbar {
     background-color: white; /* 白色背景 */
-    border-radius: 12px; /* 圆角 */
+    border-radius: 16px; /* 圆角 */
     padding: 10px 20px; /* 内边距 */
     display: flex; /* 使用flex布局 */
     justify-content: space-around; /* 水平等间距 */
     align-items: center; /* 垂直居中 */
+
 }
 
 .tools {
     height: 90rpx;
     width: 90rpx;
+    border-radius: 8px;
 }
 
 #color_shower {
@@ -45,8 +48,13 @@ page {
     top: 600rpx;
     position: absolute
 }
+
 #tupian {
-  box-shadow: 0 0 5px rgba(109, 120, 118, 0.507),
-              0 0 20px rgba(109, 120, 118, 1),
-              0 0 30px rgba(109, 120, 118, 1);
+    box-shadow: 0 0 5px rgba(109, 120, 118, 0.507),
+    0 0 20px rgba(109, 120, 118, 1),
+    0 0 30px rgba(109, 120, 118, 1);
+}
+
+.edu {
+    position: relative;
 }

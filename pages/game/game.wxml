@@ -8,15 +8,21 @@
            style="position: absolute; left: 18rpx; top: 47rpx; width: 699rpx; height: 520rpx; display: block; box-sizing: border-box"></image>
     <view id="toolbar"
           style="width: 560rpx; height: 100rpx; display: flex; box-sizing: border-box; position: absolute; left: 87rpx; top: 699rpx">
-
-        <image src="/pages/images/glue.jpg" class="tools" bindtap="changePlayingMode" data-index="1"></image>
-        <image src="/pages/images/golden_shit.jpg" class="tools" bindtap="changePlayingMode" data-index="2"></image>
-        <image src="/pages/images/plane_cub.png" class="tools" bindtap="changePlayingMode" data-index="3"></image>
-        <image src="/pages/images/merrge_fovl.png" class="tools" bindtap="changePlayingMode" data-index="4"></image>
+        <image src="/pages/images/glue.jpg" class="tools" bindtap="changePlayingMode" data-index="1"
+               style="{{playingMode === '1' ? 'border: 2px solid #A52A2A;' : ''}}"></image>
+        <image src="/pages/images/golden_shit.jpg" class="tools" bindtap="changePlayingMode" data-index="2"
+               style="{{playingMode === '2' ? 'border: 2px solid #A52A2A;' : ''}}"></image>
+        <image src="/pages/images/plane_cub.png" class="tools" bindtap="changePlayingMode" data-index="3"
+               style="{{playingMode === '3' ? 'border: 2px solid #A52A2A;' : ''}}"></image>
+        <image src="/pages/images/merrge_fovl.png" class="tools" bindtap="changePlayingMode" data-index="4"
+               style="{{playingMode === '4' ? 'border: 2px solid #A52A2A;' : ''}}"></image>
     </view>
     <view id="color_shower"
+          wx:if="{{playingMode==='3' || playingMode==='4'}}"
           style="{{colorShowerStyle}};position: relative; left: 460rpx; top: 831rpx"></view>
-    <view>
+    <view
+            wx:if="{{playingMode==='3' || playingMode==='4'}}"
+    >
         <text style="color: red; position: absolute; left: 87rpx; top: 850rpx; width: 114rpx; height: 41rpx; display: block; box-sizing: border-box">红色</text>
         <slider bindchange="changeRed" show-value min="0" backgroundColor="red" max="255" id="red"
                 style="position: absolute; left: 20rpx; top: 872rpx; width: 370rpx; height: 41rpx; display: block; box-sizing: border-box"
@@ -35,10 +41,25 @@
                 style="position: absolute; left: 20rpx; top: 1239rpx; width: 370rpx; height: 41rpx; display: block; box-sizing: border-box"
                 class="slidebars"></slider>
     </view>
-    <button bindtap="saveImage" style="position: absolute; top: 1029rpx; left: 447rpx; width: 270rpx; height: 97rpx; display: block; box-sizing: border-box">
+    <button bindtap="nextEdu"  style="top: 1325rpx; position: fixed; left: 447rpx; width: 270rpx; height: 68rpx; display: block; box-sizing: border-box; border-radius: 8px">
+        {{edu>0 ? '下一步': '教学'}}
+    </button>
+    <view class="edu">
+
+        <text class="edu" style="position: relative; left: 170rpx; top: 691rpx" wx:if="{{edu===1}}">↑首先，请点击胶水工具并在图上涂抹胶水</text>
+        <text class="edu" style="position: relative; left: 12rpx; top: 420rpx" wx:if="{{edu===2}}"> 涂抹完胶水后，请点击掐丝工具。在某处按下，在涂有胶水的地方抬起以完成一条金丝↓</text>
+        <!--         after c-->
+        <text class="edu" style="position: relative; left: 12rpx; top: 592rpx" wx:if="{{edu===3}}">↑完成掐丝后，点击涂色工具。可拖动下方的调色板设置颜色以及粗细，并在图上上色</text>
+        <text class="edu" style="position: relative; left: -62rpx; top: 340rpx" wx:if="{{edu===4}}">最后，选择混色工具，将范围内的颜色进行混合↓</text>
+        <text class="edu" style="position: relative; left: 12rpx; top: 572rpx" wx:if="{{edu===5}}">  也可以在右下角进行重置或者保存您的作品</text>
+
+
+    </view>
+    <button bindtap="saveImage"
+            style="border-radius: 8px;position: absolute; top: 1029rpx; left: 447rpx; width: 270rpx; height: 97rpx; display: block; box-sizing: border-box">
         保存图片
     </button>
-    <button style="position: absolute; top: 1185rpx; left: 447rpx; width: 270rpx; height: 97rpx; display: block; box-sizing: border-box"
+    <button style="border-radius: 8px;position: absolute; top: 1185rpx; left: 447rpx; width: 270rpx; height: 97rpx; display: block; box-sizing: border-box"
             bindtap="resetCanvas">重置
     </button>
     <canvas
@@ -48,7 +69,7 @@
             bindtouchstart="touchStart"
             bindtouchmove="touchMove"
             bindtouchend="touchEnd"
-            style="position: relative; left: 18rpx; top: -91rpx; width: {{CanvasWidth}}rpx; height: {{CanvasHeight}}rpx; display: block; box-sizing: border-box"></canvas>
+            style="position: relative; left: 18rpx; top: -54rpx; width: {{CanvasWidth}}rpx; height: {{CanvasHeight}}rpx; display: block; box-sizing: border-box"></canvas>
 
 
 </view>

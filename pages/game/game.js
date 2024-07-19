@@ -25,6 +25,7 @@ Page({
         endX: 0,
         endY: 0,
         playingMode: "1", //1=打胶 2=掐线 3=打色 4=混色
+        edu: 0,
     },
 
     onLoad: function () {
@@ -391,5 +392,39 @@ Page({
                 }
             },
         })
+    },
+    nextEdu: function () {
+        if (this.data.edu <= 5) {
+            this.setData({
+                edu: this.data.edu + 1,
+            });
+        }
+        if (this.data.edu > 5) {
+            this.setData({
+                edu: 0,
+            })
+        }
+        switch (this.data.edu) {
+            case 1:
+                this.setData({
+                    playingMode: "1",
+                })
+                break;
+            case 2:
+                this.setData({
+                    playingMode: "2",
+                })
+                break;
+            case 3:
+                this.setData({
+                    playingMode: "3",
+                })
+                break;
+            case 4:
+                this.setData({
+                    playingMode: "4",
+                })
+                break;
+        }
     },
 })
