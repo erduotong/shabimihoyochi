@@ -35,8 +35,8 @@
                 style="position: absolute; left: 20rpx; top: 1239rpx; width: 370rpx; height: 41rpx; display: block; box-sizing: border-box"
                 class="slidebars"></slider>
     </view>
-    <button style="position: absolute; top: 1029rpx; left: 447rpx; width: 270rpx; height: 97rpx; display: block; box-sizing: border-box">
-        分享图片
+    <button bindtap="saveImage" style="position: absolute; top: 1029rpx; left: 447rpx; width: 270rpx; height: 97rpx; display: block; box-sizing: border-box">
+        保存图片
     </button>
     <button style="position: absolute; top: 1185rpx; left: 447rpx; width: 270rpx; height: 97rpx; display: block; box-sizing: border-box"
             bindtap="resetCanvas">重置

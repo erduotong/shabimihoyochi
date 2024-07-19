@@ -52,8 +52,8 @@ Page({
             canvasId: "paintCanvas",
             x: this.data.moveX,
             y: this.data.moveY,
-            width: 10,
-            height: 10,
+            width: this.data.size + 2,
+            height: this.data.size + 2,
             success: (res) => {
                 const data = res.data;
                 let foundGrey = false;
@@ -353,7 +353,6 @@ Page({
                             icon: "success",
                             duration: 2000,
                         })
-
                     },
                     fail(err) {
                         console.error("保存失败:", err);
