@@ -1,6 +1,4 @@
-let c = 0
-let arrayA = []
-
+let audioContext = null;
 
 Page({
 
@@ -29,13 +27,23 @@ Page({
     },
 
     onLoad: function () {
-
+        this.audioContext = wx.createInnerAudioContext(); // Create the audio context
+        this.audioContext.src = "/pages/musics/Anthropic_Domain.mp3"; // Step 2: Set the audio source
+        this.audioContext.loop = true; // Step 3: Enable looping
+        this.audioContext.play(); // Step 4: Play the audio
         const context = wx.createCanvasContext("paintCanvas", this);
         this.setData({context});
 
     },
-    outputImage: function () {
-
+    onHide: function () {
+        this.audioContext.pause(); // Step
+    },
+    onShow: function () {
+        this.audioContext.play(); // Step 6: Optionally, resume playback when the page is shown again
+    },
+    onUnload: function () {
+        this.audioContext.stop(); // Stop the audio when the page is unloaded
+        this.audioContext.destroy(); // Destroy the audio context to release resources
     },
     paintDying: function (x, y) {
         const {

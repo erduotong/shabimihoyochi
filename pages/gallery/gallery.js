@@ -10,7 +10,10 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+    this.audioContext = wx.createInnerAudioContext(); // Create the audio context
+        this.audioContext.src = "/pages/musics/Lustrous_Moonlight.mp3"; // Step 2: Set the audio source
+        this.audioContext.loop = true; // Step 3: Enable looping
+        this.audioContext.play(); // Step 4: Play the audio
     },
 
     /**
@@ -24,21 +27,22 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow() {
-
+      this.audioContext.play(); // Step 6: Optionally, res
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
     onHide() {
-
+  this.audioContext.pause(); // Step
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
     onUnload() {
-
+ this.audioContext.stop(); // Stop the audio when the page is unloaded
+        this.audioContext.destroy(); // Destroy the audio context to release resources
     },
 
     /**

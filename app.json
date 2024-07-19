@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/gallery/gallery",
     "pages/game/game",
-    "pages/paint/paint"
+    "pages/paint/paint",
+    "pages/infos/infos"
   ],
   "window": {
     "navigationStyle": "default",

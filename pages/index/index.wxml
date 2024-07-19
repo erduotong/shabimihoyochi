@@ -13,4 +13,8 @@
           style="position: relative; left: 220rpx; top: 200rpx; width: 289rpx; height: 724rpx; display: block; box-sizing: border-box">
         {{text}}
     </text>
+    <view
+          style="display: flex; justify-content: center; align-items: center; position: absolute; left: 502rpx; top: 1350rpx; color: grey">
+        <navigator url="/pages/infos/infos">制作信息</navigator>
+    </view>
 </view>

@@ -15,7 +15,10 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+    this.audioContext = wx.createInnerAudioContext(); // Create the audio context
+        this.audioContext.src = "/pages/musics/Serene_Stroll.mp3"; // Step 2: Set the audio source
+        this.audioContext.loop = true; // Step 3: Enable looping
+        this.audioContext.play(); // Step 4: Play the audio
     },
 
     /**
@@ -47,6 +50,7 @@ Page({
             }
         };
         showText();
+               this.audioContext.play(); // Step 6: Optionally, resume playbac
     },
 
     /**
@@ -54,13 +58,15 @@ Page({
      */
     onHide() {
         this.setData({able_continue: false});
+           this.audioContext.pause(); // Step
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
     onUnload() {
-
+  this.audioContext.stop(); // Stop the audio when the page is unloaded
+        this.audioContext.destroy(); // Destroy the audio context to release resources
     },
 
     /**
